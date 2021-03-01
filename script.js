@@ -30,8 +30,12 @@ function updateDisplay (num){
 }
 
 
+// On click of number button this will add the number to the display value
 const numberButtons = document.getElementsByClassName("num");
 Array.from(numberButtons).forEach(num => {
-    num.addEventListener('click', test);
+    num.addEventListener('click', function(){
+        let displayValue = parseInt(this.innerHTML);
+        console.log(displayValue)
+    });
 });
 
